@@ -8,9 +8,59 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+import "./normalize.css"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+    color: #555555;
+  }
+`
+
+const ContactSection = styled.div`
+  margin: 0 auto;
+  max-width: 500px;
+  color: #555555;
+  @media (max-width: 700px) {
+    max-width: 400px;
+  }
+  h2 {
+    font-family: "Roboto Slab";
+    font-size: 24px;
+    margin-bottom: -10px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  form {
+    margin: 0 auto;
+    label {
+      display: block;
+      font-family: "Roboto Slab";
+      color: #555555;
+      font-size: 14px;
+    }
+    input,
+    textarea {
+      display: block;
+      font-family: "Montserrat";
+      color: #555555;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      border-radius: 0;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    input {
+      height: 36px;
+    }
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +75,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -35,10 +86,37 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <hr
+          style={{
+            border: "1px solid rgba(95, 165, 118, 0.26)",
+          }}
+        />
+        <ContactSection>
+          <h2>Need a website?</h2>
+          <p>I’m currently accepting clients and would love to talk.</p>
+          <form>
+            <label htmlFor="name">
+              Name
+              <input type="text" name="name" />
+            </label>
+            <label htmlFor="email">
+              Email
+              <input type="email" name="email" />
+            </label>
+            <label htmlFor="info">
+              Information
+              <textarea name="info" rows="5" />
+            </label>
+          </form>
+        </ContactSection>
+        <footer
+          style={{
+            textAlign: "center",
+            fontSize: "12px",
+            opacity: "0.7",
+          }}
+        >
+          © {new Date().getFullYear()}, Kyle Anderson
         </footer>
       </div>
     </>
