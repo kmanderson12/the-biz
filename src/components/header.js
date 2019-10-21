@@ -41,6 +41,9 @@ const LayoutHeader = styled.div`
         color: #555555;
         text-decoration: none;
         padding: 0 1.15rem;
+        @media (max-width: 350px) {
+          padding: 0 0.8rem;
+        }
         li {
           display: inline;
         }
@@ -62,6 +65,9 @@ const OutlineBox = styled.div`
   height: 42px;
   top: -70px;
   margin: 0 auto;
+  @media (max-width: 350px) {
+    width: 300px;
+  }
 `
 
 const Header = ({ siteTitle }) => (
@@ -75,13 +81,13 @@ const Header = ({ siteTitle }) => (
       <div className="site-nav">
         <ul>
           <Link to="/">
-          <li>about</li>
+            <li>about</li>
           </Link>
           <Link to="/projects">
-          <li>projects</li>
+            <li>projects</li>
           </Link>
           <Link to="/">
-          <li>contact</li>
+            <li>contact</li>
           </Link>
         </ul>
       </div>

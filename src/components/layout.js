@@ -50,14 +50,35 @@ const ContactSection = styled.div`
     textarea {
       display: block;
       font-family: "Montserrat";
+      box-sizing: border-box;
       color: #555555;
       border: 1px solid rgba(0, 0, 0, 0.8);
       border-radius: 0;
       width: 100%;
       margin-bottom: 20px;
+      padding: 5px;
+      ::placeholder {
+        font-family: "Montserrat";
+        font-weight: 300;
+        font-size: 12px;
+        /* font-style: italic; */
+      }
     }
     input {
       height: 36px;
+    }
+    button {
+      display: block;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-family: "Roboto Slab";
+      padding: 1rem;
+      font-weight: 700;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: none;
+      cursor: pointer;
     }
   }
 `
@@ -85,14 +106,20 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main
+          style={{
+            minHeight: "400px",
+          }}
+        >
+          {children}
+        </main>
         <hr
           style={{
             border: "1px solid rgba(95, 165, 118, 0.26)",
           }}
         />
         <ContactSection>
-          <h2>Need a website?</h2>
+          <h2 id="contact-me">Need a website?</h2>
           <p>I’m currently accepting clients and would love to talk.</p>
           <form>
             <label htmlFor="name">
@@ -105,8 +132,13 @@ const Layout = ({ children }) => {
             </label>
             <label htmlFor="info">
               Information
-              <textarea name="info" rows="5" />
+              <textarea
+                name="info"
+                rows="5"
+                placeholder="Share a little bit about the potential project or website."
+              />
             </label>
+            <button>Contact Me</button>
           </form>
         </ContactSection>
         <footer
@@ -114,6 +146,7 @@ const Layout = ({ children }) => {
             textAlign: "center",
             fontSize: "12px",
             opacity: "0.7",
+            marginTop: "50px",
           }}
         >
           © {new Date().getFullYear()}, Kyle Anderson

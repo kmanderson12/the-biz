@@ -1,9 +1,24 @@
 import React, { Component } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
-import me_square from "../images/me_square.png"
-import twitter from "../images/twitter.svg"
-import facebook from "../images/facebook.svg"
-import mail from "../images/mail.svg"
+import { Twitter, Facebook, Mail } from "./icons"
+
+const Image = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      myImage: file(relativePath: { regex: "/me_square/" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            src
+          }
+        }
+      }
+    }
+  `)
+
+  return <Img fluid={data.myImage.childImageSharp.fluid} />
+}
 
 const AboutContainer = styled.div`
   display: flex;
@@ -11,17 +26,29 @@ const AboutContainer = styled.div`
   align-items: center;
   margin: 0 auto;
   max-width: 800px;
-  margin-bottom: 100px;
+  min-height: 350px;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+  }
 `
 
 const LeftDiv = styled.div`
   flex-grow: 1;
   padding-right: 20px;
   border-right: 4px solid #5fa576;
-  img {
-    max-width: 225px;
+  @media (max-width: 700px) {
+    border: none;
+    border-bottom: 2px solid #5fa576;
+    padding: 0;
+  }
+  .gatsby-image-wrapper {
+    height: 225px;
+    width: 225px;
     @media (max-width: 700px) {
-      max-height: 160px;
+      height: 160px;
+      width: 160px;
     }
   }
 `
@@ -34,6 +61,7 @@ const RightDiv = styled.div`
     font-family: "Roboto Slab";
     margin-bottom: -10px;
     font-size: 36px;
+    line-height: 33px;
   }
   p {
     font-weight: 300;
@@ -46,6 +74,7 @@ const RightDiv = styled.div`
     p {
       font-size: 14px;
     }
+    padding: 0 1rem;
   }
 `
 
@@ -53,12 +82,23 @@ const Social = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  img {
-    max-height: 35px;
+  @media (max-width: 700px) {
+    justify-content: center;
+  }
+  a {
     padding-right: 1.2rem;
+  }
+  svg {
+    max-height: 35px;
+    :hover {
+      fill: #5fa576ab;
+    }
     @media (max-width: 700px) {
       max-height: 23px;
     }
+  }
+  a:last-child {
+    padding: 0;
   }
 `
 
@@ -67,7 +107,7 @@ class About extends Component {
     return (
       <AboutContainer>
         <LeftDiv>
-          <img src={me_square} atl="me" />
+          <Image />
         </LeftDiv>
         <RightDiv>
           <h1>Hey there,</h1>
@@ -76,12 +116,29 @@ class About extends Component {
             building a website or coding a full-stack application, I love
             helping others find solutions on the web.
           </p>
-        <Social>
-
-          <img src={twitter} alt="twitter" />
-          <img src={facebook} alt="facebook" />
-          <img src={mail} alt="mail" />
-        </Social>
+          <Social>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://www.twitter.com/kyle_codes"
+            >
+              <Twitter />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://www.facebook.com/kmanderson12"
+            >
+              <Facebook />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="mailto:kmanderson12@gmail.com"
+            >
+              <Mail />
+            </a>
+          </Social>
         </RightDiv>
       </AboutContainer>
     )
