@@ -16,8 +16,6 @@ import "./normalize.css"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,700&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
     color: #555555;
   }
 `
@@ -122,6 +120,7 @@ const Layout = ({ children }) => {
           <h2 id="contact-me">Need a website?</h2>
           <p>I’m currently accepting clients and would love to talk.</p>
           <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="name">
               Name
               <input type="text" name="name" />
