@@ -86,7 +86,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/projects">
             <li>projects</li>
           </Link>
-          <Link to="/">
+          <Link to="#contact-me">
             <li>contact</li>
           </Link>
         </ul>
