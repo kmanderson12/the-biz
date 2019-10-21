@@ -32,6 +32,7 @@ const LeftDiv = styled.div`
   h1 {
     line-height: 33px;
     font-size: 30px;
+    color: #555555;
   }
   @media (max-width: 800px) {
     border: none;

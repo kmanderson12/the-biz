@@ -121,7 +121,7 @@ const Layout = ({ children }) => {
         <ContactSection>
           <h2 id="contact-me">Need a website?</h2>
           <p>I’m currently accepting clients and would love to talk.</p>
-          <form>
+          <form name="contact" method="POST" data-netlify="true">
             <label htmlFor="name">
               Name
               <input type="text" name="name" />
@@ -138,7 +138,7 @@ const Layout = ({ children }) => {
                 placeholder="Share a little bit about the potential project or website."
               />
             </label>
-            <button>Contact Me</button>
+            <button type="submit">Contact Me</button>
           </form>
         </ContactSection>
         <footer
