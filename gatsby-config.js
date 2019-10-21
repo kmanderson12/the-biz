@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Kyle Anderson | Web Design and Development`,
-    description: `I'm a web designer and developer from Cookeville, TN.`,
+    title: `Kyle Anderson | Web Design & Development in Cookeville, TN`,
+    description: `Web Design and Development in Cookeville, TN.`,
     author: `@kyle_codes`,
   },
   plugins: [
