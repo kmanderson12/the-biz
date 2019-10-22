@@ -95,8 +95,8 @@ const Projects = () => (
     <LeftDiv>
       <a
         target="_blank"
-        rel="noopener"
-        href="http://sickfits-kma-prd.herokuapp.com"
+        rel="noopener noreferrer"
+        href="https://sickfits-kma-prd.herokuapp.com"
       >
         <h1>Sick Fits</h1>
       </a>
@@ -116,7 +116,7 @@ const Projects = () => (
     <LeftDiv>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://pastoraltweets.netlify.com/"
       >
         <h1>

@@ -119,21 +119,21 @@ class About extends Component {
           <Social>
             <a
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="http://www.twitter.com/kyle_codes"
             >
               <Twitter />
             </a>
             <a
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="http://www.facebook.com/kmanderson12"
             >
               <Facebook />
             </a>
             <a
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="mailto:kmanderson12@gmail.com"
             >
               <Mail />
