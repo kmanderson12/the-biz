@@ -62,6 +62,7 @@ const RightDiv = styled.div`
     font-size: 14px;
   }
   @media (max-width: 800px) {
+    padding-left: 0;
     h1 {
       font-size: 1.5em;
     }
