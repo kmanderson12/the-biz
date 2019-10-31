@@ -134,7 +134,7 @@ class About extends Component {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="mailto:kmanderson12@gmail.com"
+              href="mailto:cookevillewebdev@gmail.com"
             >
               <Mail />
             </a>

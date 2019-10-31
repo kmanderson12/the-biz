@@ -83,7 +83,7 @@ const Projects = () => (
     </LeftDiv>
     <RightDiv>
       <p>
-        A web application designed to help conect schools with pre-approved
+        A web application designed to help connect schools with pre-approved
         substitute teachers. Teachers can schedule an absence and notifications
         are instantly sent to any eligible subs.
       </p>

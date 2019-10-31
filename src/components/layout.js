@@ -130,7 +130,7 @@ const Layout = ({ children }) => {
               <input type="email" name="email" />
             </label>
             <label htmlFor="info">
-              Information
+              Message
               <textarea
                 name="info"
                 rows="5"
