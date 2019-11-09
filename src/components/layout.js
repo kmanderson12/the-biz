@@ -123,11 +123,11 @@ const Layout = ({ children }) => {
             <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="name">
               Name
-              <input type="text" name="name" />
+              <input type="text" name="name" required />
             </label>
             <label htmlFor="email">
               Email
-              <input type="email" name="email" />
+              <input type="email" name="email" required />
             </label>
             <label htmlFor="info">
               Message
@@ -135,6 +135,7 @@ const Layout = ({ children }) => {
                 name="info"
                 rows="5"
                 placeholder="Share a little bit about the potential project or website."
+                required
               />
             </label>
             <button type="submit">Contact Me</button>
