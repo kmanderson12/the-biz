@@ -3,7 +3,13 @@ import styled from "styled-components"
 import { Github, Codepen } from "../components/icons"
 
 const Projects = () => (
-  <ProjectContainer>
+  <ProjectsContainer>
+    <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://subme-design.now.sh/account"
+      >
+    <Wrapper>
     <LeftDiv>
       <a
         target="_blank"
@@ -25,15 +31,17 @@ const Projects = () => (
         Twilio API
       </p>
     </RightDiv>
+    </Wrapper>
+    </a>
     <BreakDiv />
-    <LeftDiv>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://sickfits-kma-prd.herokuapp.com"
       >
+        <Wrapper>
+    <LeftDiv>
         <h1>Sick Fits</h1>
-      </a>
     </LeftDiv>
     <RightDiv>
       <p>
@@ -47,15 +55,17 @@ const Projects = () => (
         Stripe API
       </p>
     </RightDiv>
+    </Wrapper>
+    </a>
     <BreakDiv />
-    <LeftDiv>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://ka-js-calc.netlify.com/"
       >
+        <Wrapper>
+    <LeftDiv>
         <h1>jsCalc()</h1>
-      </a>
     </LeftDiv>
     <RightDiv>
       <p>
@@ -67,19 +77,21 @@ const Projects = () => (
         <strong>Built With: </strong> HTML, CSS, JavaScript
       </p>
     </RightDiv>
+    </Wrapper>
+    </a>
     <BreakDiv />
-    <LeftDiv>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://pastoraltweets.netlify.com/"
       >
+        <Wrapper>
+    <LeftDiv>
         <h1>
           Pastoral
           <br />
           Tweets
         </h1>
-      </a>
     </LeftDiv>
     <RightDiv>
       <p>
@@ -90,6 +102,8 @@ const Projects = () => (
         <strong>Built With: </strong> HTML, CSS, jQuery, Twitter API
       </p>
     </RightDiv>
+        </Wrapper>
+        </a>
     <BreakDiv />
     <CenterDiv>
       <h3>For more projects, check out my developer profiles:</h3>
@@ -104,12 +118,12 @@ const Projects = () => (
         </IconButton>
       </ButtonWrapper>
     </CenterDiv>
-  </ProjectContainer>
+  </ProjectsContainer>
 )
 
 export default Projects
 
-const ProjectContainer = styled.div`
+const ProjectsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,6 +137,34 @@ const ProjectContainer = styled.div`
     max-width: 500px;
   }
   margin-bottom: 20px;
+  > a {
+    width: 100%;
+    text-decoration: none;
+    color: #555555;
+    :hover {
+      color: #555555ab;
+    }
+  }
+`
+
+const Wrapper = styled.div`
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+  :hover {
+    background: #edf2f7;
+    cursor: pointer;
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+  }
 `
 
 const LeftDiv = styled.div`
@@ -170,7 +212,7 @@ const RightDiv = styled.div`
     font-size: 14px;
   }
   @media (max-width: 800px) {
-    padding-left: 0;
+    padding: 0 .5rem;
     h1 {
       font-size: 1.5em;
     }
@@ -218,6 +260,7 @@ const IconButton = styled.a`
   text-decoration: none;
   > * {
     margin: 0 0.3rem;
+    color: white;
   }
   :hover {
     background: #555555db;
