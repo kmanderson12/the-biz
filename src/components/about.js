@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { Twitter, LinkedIn, Mail } from "./icons"
+import { Twitter, LinkedIn, Mail, Resume } from "./icons"
 
 const Image = () => {
   const data = useStaticQuery(graphql`
@@ -56,6 +56,12 @@ class About extends Component {
             >
               <LinkedIn />
             </a>
+            <a href={withPrefix('/Kyle_Anderson_Resume.pdf')}
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+              <Resume />
+              </a>
           </Social>
         </RightDiv>
       </AboutContainer>
