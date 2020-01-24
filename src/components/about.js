@@ -10,7 +10,7 @@ const Image = () => {
       myImage: file(relativePath: { regex: "/me_square/" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -38,6 +38,13 @@ class About extends Component {
             <a
               target="_blank"
               rel="noopener noreferrer"
+              href="mailto:cookevillewebdev@gmail.com"
+            >
+              <Mail />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="http://www.twitter.com/kyle_codes"
             >
               <Twitter />
@@ -48,13 +55,6 @@ class About extends Component {
               href="http://www.linkedin.com/in/kmanderson12"
             >
               <LinkedIn />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:cookevillewebdev@gmail.com"
-            >
-              <Mail />
             </a>
           </Social>
         </RightDiv>
