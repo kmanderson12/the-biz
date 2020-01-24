@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { Twitter, Facebook, Mail } from "./icons"
+import { Twitter, LinkedIn, Mail } from "./icons"
 
 const Image = () => {
   const data = useStaticQuery(graphql`
@@ -19,6 +19,51 @@ const Image = () => {
 
   return <Img fluid={data.myImage.childImageSharp.fluid} />
 }
+
+class About extends Component {
+  render() {
+    return (
+      <AboutContainer>
+        <LeftDiv>
+          <Image />
+        </LeftDiv>
+        <RightDiv>
+          <h1>Hey there,</h1>
+          <p>
+            I’m a web designer and developer from Cookeville, TN. Whether it’s
+            building a website or coding a full-stack application, I love
+            helping others find solutions on the web.
+          </p>
+          <Social>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://www.twitter.com/kyle_codes"
+            >
+              <Twitter />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://www.linkedin.com/in/kmanderson12"
+            >
+              <LinkedIn />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:cookevillewebdev@gmail.com"
+            >
+              <Mail />
+            </a>
+          </Social>
+        </RightDiv>
+      </AboutContainer>
+    )
+  }
+}
+
+export default About
 
 const AboutContainer = styled.div`
   display: flex;
@@ -101,48 +146,3 @@ const Social = styled.div`
     padding: 0;
   }
 `
-
-class About extends Component {
-  render() {
-    return (
-      <AboutContainer>
-        <LeftDiv>
-          <Image />
-        </LeftDiv>
-        <RightDiv>
-          <h1>Hey there,</h1>
-          <p>
-            I’m a web designer and developer from Cookeville, TN. Whether it’s
-            building a website or coding a full-stack application, I love
-            helping others find solutions on the web.
-          </p>
-          <Social>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://www.twitter.com/kyle_codes"
-            >
-              <Twitter />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://www.facebook.com/kmanderson12"
-            >
-              <Facebook />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:cookevillewebdev@gmail.com"
-            >
-              <Mail />
-            </a>
-          </Social>
-        </RightDiv>
-      </AboutContainer>
-    )
-  }
-}
-
-export default About
