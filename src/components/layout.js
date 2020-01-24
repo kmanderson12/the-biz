@@ -50,7 +50,7 @@ const ContactSection = styled.div`
       font-family: "Montserrat";
       box-sizing: border-box;
       color: #555555;
-      border: 1px solid rgba(0, 0, 0, 0.8);
+      border: 1px solid #555555;
       border-radius: 0;
       width: 100%;
       margin-bottom: 20px;
@@ -117,8 +117,8 @@ const Layout = ({ children }) => {
           }}
         />
         <ContactSection>
-          <h2 id="contact-me">Need a website?</h2>
-          <p>I’m currently accepting clients and would love to talk.</p>
+          <h2 id="contact-me">Need a developer?</h2>
+          <p>I’m looking for opportunities and would love to talk.</p>
           <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="name">
@@ -134,7 +134,7 @@ const Layout = ({ children }) => {
               <textarea
                 name="info"
                 rows="5"
-                placeholder="Share a little bit about the potential project or website."
+                placeholder="Share a little bit about the opportunity."
                 required
               />
             </label>

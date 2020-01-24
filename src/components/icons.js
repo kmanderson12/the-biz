@@ -68,4 +68,113 @@ const Mail = () => {
   )
 }
 
-export { Twitter, Facebook, Mail }
+const Github = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0)">
+        <path
+          d="M16 22V18.13C16.0375 17.6532 15.9731 17.1738 15.811 16.7238C15.6489 16.2738 15.3929 15.8634 15.06 15.52C18.2 15.17 21.5 13.98 21.5 8.52C21.4997 7.12382 20.9627 5.7812 20 4.77C20.4559 3.5485 20.4236 2.19835 19.91 0.999999C19.91 0.999999 18.73 0.649999 16 2.48C13.708 1.85882 11.292 1.85882 9 2.48C6.27 0.649999 5.09 0.999999 5.09 0.999999C4.57638 2.19835 4.54414 3.5485 5 4.77C4.03013 5.7887 3.49252 7.14346 3.5 8.55C3.5 13.97 6.8 15.16 9.94 15.55C9.611 15.89 9.35726 16.2954 9.19531 16.7399C9.03335 17.1844 8.96681 17.6581 9 18.13V22M9 19C4 20.5 4 16.5 2 16L9 19Z"
+          stroke="white"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="24" height="24" rx="5" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+const Codepen = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"
+        stroke="white"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12 22V15.5"
+        stroke="white"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M22 8.5L12 15.5L2 8.5"
+        stroke="white"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M2 15.5L12 8.5L22 15.5"
+        stroke="white"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12 2V8.5"
+        stroke="white"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  )
+}
+
+const LinkedIn = () => {
+  return (
+    <svg
+      width="35"
+      height="35"
+      viewBox="0 0 35 35"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.3333 11.6667C25.6539 11.6667 27.8795 12.5885 29.5204 14.2295C31.1614 15.8704 32.0833 18.096 32.0833 20.4167V30.625H26.2499V20.4167C26.2499 19.6431 25.9426 18.9013 25.3956 18.3543C24.8487 17.8073 24.1068 17.5 23.3333 17.5C22.5597 17.5 21.8178 17.8073 21.2709 18.3543C20.7239 18.9013 20.4166 19.6431 20.4166 20.4167V30.625H14.5833V20.4167C14.5833 18.096 15.5051 15.8704 17.1461 14.2295C18.787 12.5885 21.0126 11.6667 23.3333 11.6667V11.6667Z"
+        stroke="#555555"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M8.75008 13.125H2.91675V30.625H8.75008V13.125Z"
+        stroke="#555555"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M5.83341 8.75C7.44424 8.75 8.75008 7.44416 8.75008 5.83333C8.75008 4.2225 7.44424 2.91666 5.83341 2.91666C4.22258 2.91666 2.91675 4.2225 2.91675 5.83333C2.91675 7.44416 4.22258 8.75 5.83341 8.75Z"
+        stroke="#555555"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  )
+}
+
+export { Twitter, Facebook, Mail, Codepen, Github, LinkedIn }
