@@ -5,114 +5,164 @@ import { Github, Codepen } from "../components/icons"
 const Projects = () => (
   <ProjectsContainer>
     <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://subme-design.now.sh/account"
-      >
-    <Wrapper>
-    <LeftDiv>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://subme-design.now.sh/account"
-      >
-        <h1>SubMe</h1>
-      </a>
-    </LeftDiv>
-    <RightDiv>
-      <p>
-        A web application designed to help connect schools with pre-approved
-        substitute teachers. Teachers can schedule an absence and notifications
-        are instantly sent to any eligible subs.{" "}
-        <strong>Work-In-Progress</strong>
-      </p>
-      <p>
-        <strong>Built With: </strong> Next.js (React), Apollo, GraphQL, Hasura,
-        Twilio API
-      </p>
-    </RightDiv>
-    </Wrapper>
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://dueonrepeat.now.sh/"
+    >
+      <Wrapper>
+        <LeftDiv>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://dueonrepeat.now.sh/"
+          >
+            <DueText>
+              <span className="medium">due</span>
+              <span className="light">on</span>repeat
+            </DueText>
+          </a>
+        </LeftDiv>
+        <RightDiv>
+          <p>
+            Track recurring income and expenses. Gain greater visibility into
+            your budget. This is a budget app I'm currently working on as a side
+            project. For a full write-up of my thoughts, checkout the ReadMe in
+            the{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/kmanderson12/due-on-repeat"
+            >
+              GitHub repo
+            </a>
+            .
+          </p>
+          <p>
+            <strong>Built With: </strong> Next.js (React), styled-components,
+            React Hooks and Context
+          </p>
+        </RightDiv>
+      </Wrapper>
+    </a>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://subme-design.now.sh/account"
+    >
+      <Wrapper>
+        <LeftDiv>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://subme-design.now.sh/account"
+          >
+            <h1>SubMe</h1>
+          </a>
+        </LeftDiv>
+        <RightDiv>
+          <p>
+            A web application designed to help connect schools with pre-approved
+            substitute teachers. Teachers can schedule an absence and
+            notifications are instantly sent to any eligible subs.{" "}
+            <strong>Work-In-Progress</strong>
+          </p>
+          <p>
+            <strong>Built With: </strong> Next.js (React), Apollo, GraphQL,
+            Hasura, Twilio API
+          </p>
+        </RightDiv>
+      </Wrapper>
     </a>
     <BreakDiv />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://sickfits-kma-prd.herokuapp.com"
-      >
-        <Wrapper>
-    <LeftDiv>
-        <h1>Sick Fits</h1>
-    </LeftDiv>
-    <RightDiv>
-      <p>
-        An example ecommerce website. Includes a shopping cart and product
-        management system built from scratch. Also supports credit card
-        processing using the Stripe API. This was built during a guided tutorial
-        by Wes Bos.
-      </p>
-      <p>
-        <strong>Built With: </strong> Next.js (React), Node.js, Prisma, GraphQL,
-        Stripe API
-      </p>
-    </RightDiv>
-    </Wrapper>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://sickfits-kma-prd.herokuapp.com"
+    >
+      <Wrapper>
+        <LeftDiv>
+          <h1>Sick Fits</h1>
+        </LeftDiv>
+        <RightDiv>
+          <p>
+            An example ecommerce website. Includes a shopping cart and product
+            management system built from scratch. Also supports credit card
+            processing using the Stripe API. This was built during a guided
+            tutorial by Wes Bos.
+          </p>
+          <p>
+            <strong>Built With: </strong> Next.js (React), Node.js, Prisma,
+            GraphQL, Stripe API
+          </p>
+        </RightDiv>
+      </Wrapper>
     </a>
     <BreakDiv />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ka-js-calc.netlify.com/"
-      >
-        <Wrapper>
-    <LeftDiv>
-        <h1>jsCalc()</h1>
-    </LeftDiv>
-    <RightDiv>
-      <p>
-        A vanilla JavaScript calculator I built for a freeCodeCamp project back
-        in 2017. This was a fun opportunity to put into practice some of the
-        foundations I learned. (View source on the JS file for a laugh.)
-      </p>
-      <p>
-        <strong>Built With: </strong> HTML, CSS, JavaScript
-      </p>
-    </RightDiv>
-    </Wrapper>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://ka-js-calc.netlify.com/"
+    >
+      <Wrapper>
+        <LeftDiv>
+          <h1>jsCalc()</h1>
+        </LeftDiv>
+        <RightDiv>
+          <p>
+            A vanilla JavaScript calculator I built for a freeCodeCamp project
+            back in 2017. This was a fun opportunity to put into practice some
+            of the foundations I learned. (View source on the JS file for a
+            laugh.)
+          </p>
+          <p>
+            <strong>Built With: </strong> HTML, CSS, JavaScript
+          </p>
+        </RightDiv>
+      </Wrapper>
     </a>
     <BreakDiv />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://pastoraltweets.netlify.com/"
-      >
-        <Wrapper>
-    <LeftDiv>
-        <h1>
-          Pastoral
-          <br />
-          Tweets
-        </h1>
-    </LeftDiv>
-    <RightDiv>
-      <p>
-        A fun random tweet generator inspired by The Happy Rant podcast.
-        Randomly create an insightful (or illogical) thought for you to tweet.
-      </p>
-      <p>
-        <strong>Built With: </strong> HTML, CSS, jQuery, Twitter API
-      </p>
-    </RightDiv>
-        </Wrapper>
-        </a>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://pastoraltweets.netlify.com/"
+    >
+      <Wrapper>
+        <LeftDiv>
+          <h1>
+            Pastoral
+            <br />
+            Tweets
+          </h1>
+        </LeftDiv>
+        <RightDiv>
+          <p>
+            A fun random tweet generator inspired by The Happy Rant podcast.
+            Randomly create an insightful (or illogical) thought for you to
+            tweet.
+          </p>
+          <p>
+            <strong>Built With: </strong> HTML, CSS, jQuery, Twitter API
+          </p>
+        </RightDiv>
+      </Wrapper>
+    </a>
     <BreakDiv />
     <CenterDiv>
       <h3>For more projects, check out my developer profiles:</h3>
       <ButtonWrapper>
-        <IconButton target="_blank" rel="noopener noreferrer" href="https://www.github.com/kmanderson12" >
+        <IconButton
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.github.com/kmanderson12"
+        >
           <Github />
           GitHub
         </IconButton>
-        <IconButton target="_blank" rel="noopener noreferrer" href="https://codepen.io/kmanderson12" >
+        <IconButton
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://codepen.io/kmanderson12"
+        >
           <Codepen />
           Codepen
         </IconButton>
@@ -210,9 +260,17 @@ const RightDiv = styled.div`
   p {
     font-weight: 300;
     font-size: 14px;
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #555555;
+      :hover {
+        color: #555555ab;
+      }
+    }
   }
   @media (max-width: 800px) {
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     h1 {
       font-size: 1.5em;
     }
@@ -270,4 +328,12 @@ const IconButton = styled.a`
 const BreakDiv = styled.div`
   flex-basis: 100%;
   height: 0;
+`
+const DueText = styled.h1`
+  span.light {
+    font-weight: 300;
+  }
+  span.medium {
+    font-weight: 400;
+  }
 `
