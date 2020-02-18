@@ -24,9 +24,9 @@ const Projects = () => (
         </LeftDiv>
         <RightDiv>
           <p>
-            Track recurring income and expenses. Gain greater visibility into
-            your budget. This is a budget app I'm currently working on as a side
-            project. For a full write-up of my thoughts, checkout the ReadMe in
+            A budget app I'm currently working on as a side project. Track
+            recurring income and expenses. Gain greater visibility into your
+            budget. For a full write-up of my thoughts, checkout the ReadMe in
             the{" "}
             <a
               target="_blank"
