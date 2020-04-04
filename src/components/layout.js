@@ -116,7 +116,7 @@ const Layout = ({ children }) => {
             border: "1px solid rgba(95, 165, 118, 0.26)",
           }}
         />
-        <ContactSection>
+        {/* <ContactSection>
           <h2 id="contact-me">Need a developer?</h2>
           <p>I’m looking for opportunities and would love to talk.</p>
           <form name="contact" method="POST" data-netlify="true">
@@ -140,7 +140,7 @@ const Layout = ({ children }) => {
             </label>
             <button type="submit">Contact Me</button>
           </form>
-        </ContactSection>
+        </ContactSection> */}
         <footer
           style={{
             textAlign: "center",

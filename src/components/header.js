@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 
 const LayoutHeader = styled.div`
   display: flex;
@@ -86,9 +86,13 @@ const Header = ({ siteTitle }) => (
           <Link to="/projects">
             <li>projects</li>
           </Link>
-          <Link to="#contact-me">
-            <li>contact</li>
-          </Link>
+          <a
+            href={withPrefix("/Kyle_Anderson_Resume.pdf")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>resumé</li>
+          </a>
         </ul>
       </div>
       <OutlineBox />
