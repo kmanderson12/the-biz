@@ -7,6 +7,34 @@ const Projects = () => (
     <a
       target="_blank"
       rel="noopener noreferrer"
+      href="https://puttpro.vercel.app"
+    >
+      <Wrapper>
+        <LeftDiv>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://puttpro.vercel.app"
+          >
+            <h1>PuttPro</h1>
+          </a>
+        </LeftDiv>
+        <RightDiv>
+          <p>
+            A hobby project I’m currently working on. This app is a fun way to
+            keep my dev skills sharp and (hopefully) improve my disc golf game
+            while I’m at it. My goal is to use it to track my putting progress
+            over time and keep notes about my form.
+          </p>
+          <p>
+            <strong>Built With: </strong> Next.js (React) / Chakra UI / MongoDB
+          </p>
+        </RightDiv>
+      </Wrapper>
+    </a>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
       href="https://dueonrepeat.now.sh/"
     >
       <Wrapper>
@@ -24,18 +52,10 @@ const Projects = () => (
         </LeftDiv>
         <RightDiv>
           <p>
-            A budget app I'm currently working on as a side project. Track
-            recurring income and expenses. Gain greater visibility into your
-            budget. For a full write-up of my thoughts, checkout the ReadMe in
-            the{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/kmanderson12/due-on-repeat"
-            >
-              GitHub repo
-            </a>
-            .
+            A sample app that tracks recurring income and expenses. For this
+            project, I took the opportunity to dive deep on some advanced React
+            concepts and built a Redux-like global store using Hooks and
+            Context.
           </p>
           <p>
             <strong>Built With: </strong> Next.js (React), styled-components,
@@ -181,7 +201,7 @@ const ProjectsContainer = styled.div`
   max-width: 800px;
   min-height: 350px;
   flex-wrap: wrap;
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     flex-direction: column;
     text-align: center;
     max-width: 500px;
@@ -204,13 +224,14 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding: 1rem;
   flex-wrap: wrap;
   transition: all 0.3s;
   :hover {
     background: #edf2f7;
     cursor: pointer;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     flex-direction: column;
     text-align: center;
     max-width: 500px;
@@ -234,7 +255,7 @@ const LeftDiv = styled.div`
     font-size: 30px;
     color: #555555;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     border: none;
     border-bottom: 2px solid #5fa576;
     padding: 0;
@@ -269,7 +290,7 @@ const RightDiv = styled.div`
       }
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     padding: 0 0.5rem;
     h1 {
       font-size: 1.5em;
