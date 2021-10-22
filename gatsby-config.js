@@ -29,18 +29,10 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`300`, `400`],
-          },
-          {
-            family: `Roboto Slab`,
-            variants: [`300`, `400`, `700`],
-          },
-        ],
+        fonts: [`Montserrat\:300,400`, `Roboto Slab\:300,400,700`],
+        display: "swap",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
