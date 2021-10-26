@@ -56,6 +56,12 @@ const LayoutHeader = styled.div`
       }
     }
   }
+  @media (max-width: 376px) {
+    .site-nav ul a {
+      font-size: 16px;
+      padding: 0 0.8rem;
+    }
+  }
 `
 
 const OutlineBox = styled.div`
@@ -65,8 +71,8 @@ const OutlineBox = styled.div`
   height: 42px;
   top: -70px;
   margin: 0 auto;
-  @media (max-width: 350px) {
-    width: 300px;
+  @media (max-width: 376px) {
+    width: 270px;
   }
 `
 

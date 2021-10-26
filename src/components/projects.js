@@ -148,11 +148,7 @@ const Projects = () => (
     >
       <Wrapper>
         <LeftDiv>
-          <h1>
-            Pastoral
-            <br />
-            Tweets
-          </h1>
+          <h1>Pastoral Tweets</h1>
         </LeftDiv>
         <RightDiv>
           <p>
@@ -205,6 +201,7 @@ const ProjectsContainer = styled.div`
     flex-direction: column;
     text-align: center;
     max-width: 500px;
+    padding: 0;
   }
   margin-bottom: 20px;
   > a {
@@ -233,8 +230,10 @@ const Wrapper = styled.div`
   }
   @media (max-width: 830px) {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     max-width: 500px;
+    padding: 0;
   }
 `
 
@@ -243,6 +242,7 @@ const LeftDiv = styled.div`
   border-right: 4px solid #5fa576;
   font-family: "Roboto Slab";
   text-align: center;
+  max-width: 196px;
   a {
     text-decoration: none;
     color: #555555;
@@ -258,7 +258,13 @@ const LeftDiv = styled.div`
   @media (max-width: 830px) {
     border: none;
     border-bottom: 2px solid #5fa576;
-    padding: 0;
+    padding: 0 0.5rem 0 0;
+    text-align: left;
+    margin-left: 0.5rem;
+    max-width: inherit;
+    h1 {
+      margin-bottom: 0.5rem;
+    }
   }
   img {
     max-width: 150px;
@@ -320,6 +326,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 const IconButton = styled.a`
