@@ -1,36 +1,19 @@
 import React, { Component } from "react"
-import { useStaticQuery, graphql, withPrefix } from "gatsby"
-import Img from "gatsby-image"
 import styled from "styled-components"
-import { Twitter, LinkedIn, Mail, Resume } from "./icons"
-
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      myImage: file(relativePath: { regex: "/me_square/" }) {
-        childImageSharp {
-          fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  return <Img fluid={data.myImage.childImageSharp.fluid} />
-}
+import { Twitter, LinkedIn, Mail, Resume } from "./icons.jsx"
+import meSquare from "../images/me_square.png"
 
 class About extends Component {
   render() {
     return (
       <AboutContainer>
         <LeftDiv>
-          <Image />
+          <img src={meSquare} alt="Kyle Anderson" />
         </LeftDiv>
         <RightDiv>
           <h1>Hey there,</h1>
           <p>
-            I’m a web designer and developer from Cookeville, TN. Whether it’s
+            I'm a web designer and developer from Cookeville, TN. Whether it's
             building a website or coding a full-stack application, I love
             helping others find solutions on the web.
           </p>
@@ -56,12 +39,13 @@ class About extends Component {
             >
               <LinkedIn />
             </a>
-            <a href={withPrefix('/Kyle_Anderson_Resume.pdf')}
-            target="_blank"
-            rel="noopener noreferrer"
+            <a
+              href={`${import.meta.env.BASE_URL}Kyle_Anderson_Resume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Resume />
-              </a>
+            </a>
           </Social>
         </RightDiv>
       </AboutContainer>
@@ -94,9 +78,10 @@ const LeftDiv = styled.div`
     border-bottom: 2px solid #5fa576;
     padding: 0;
   }
-  .gatsby-image-wrapper {
+  img {
     height: 225px;
     width: 225px;
+    object-fit: cover;
     @media (max-width: 700px) {
       height: 160px;
       width: 160px;

@@ -1,18 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
 
-import Header from "./header"
+import Header from "./header.jsx"
 import "./layout.css"
 import "./normalize.css"
+import { site } from "../siteConfig.jsx"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -59,7 +52,6 @@ const ContactSection = styled.div`
         font-family: "Montserrat";
         font-weight: 300;
         font-size: 12px;
-        /* font-style: italic; */
       }
     }
     input {
@@ -82,20 +74,10 @@ const ContactSection = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={site.title} />
       <div
         style={{
           margin: `0 auto`,
@@ -118,7 +100,7 @@ const Layout = ({ children }) => {
         />
         {/* <ContactSection>
           <h2 id="contact-me">Need a developer?</h2>
-          <p>I’m looking for opportunities and would love to talk.</p>
+          <p>I'm looking for opportunities and would love to talk.</p>
           <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="name">
@@ -149,7 +131,7 @@ const Layout = ({ children }) => {
             marginTop: "50px",
           }}
         >
-          © {new Date().getFullYear()}, Kyle Anderson
+          &copy; {new Date().getFullYear()}, Kyle Anderson
         </footer>
       </div>
     </>
