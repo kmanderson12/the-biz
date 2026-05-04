@@ -121,7 +121,7 @@ const Projects = () => (
     <a
       target="_blank"
       rel="noopener noreferrer"
-      href="https://ka-js-calc.netlify.com/"
+      href="https://ka-js-calc.netlify.app/"
     >
       <Wrapper>
         <LeftDiv>
@@ -144,7 +144,7 @@ const Projects = () => (
     <a
       target="_blank"
       rel="noopener noreferrer"
-      href="https://pastoraltweets.netlify.com/"
+      href="https://pastoraltweets.netlify.app/"
     >
       <Wrapper>
         <LeftDiv>
